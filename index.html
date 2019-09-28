@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tab Autocomplete</title>
+        <link rel="stylesheet" type="text/css" href="css/autocomplete-layout.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <!--Make sure the form has the autocomplete function switched off:-->
+            <form autocomplete="off">
+                <div class="autocomplete" style="width:300px;">
+                    <input id="myInput" type="text" name="myCountry" placeholder="Enter Email">
+                </div>
+                <input type="submit" id="add-item-to-list" value="+">
+                <input type="submit" id="toggle-filters" value="FILTERS">
+            </form>
+        </div>
+        <!--Div to store the filters-->
+        <div class="filters-container" style="visibility: hidden">
+            <div class="buildings-filter">
+                    <label>Buildings</label>
+                    <ul>
+                        <li><input class="building-checkbox" type="checkbox" checked>Building 1</li>
+                    </ul>
+            </div>
+            <div class="floors-filter">
+                <label>Building Floors</label>
+                <ul>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 0</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 1</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 2</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 3</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 4</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 5</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 6</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 7</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 8</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 9</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 10</li>
+                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 11</li>
+                </ul>
+            </div>
+            <div class="equipment-filter">
+                <label>Required Equipment</label>
+                <ul>
+                    <li><input class="equipment-checkbox" type="checkbox">Whiteboard</li>
+                    <li><input class="equipment-checkbox" type="checkbox">Polycomm</li>
+                    <li><input class="equipment-checkbox" type="checkbox">Screen</li>
+                    <li><input class="equipment-checkbox" type="checkbox">Computer</li>
+                </ul>
+            </div>
+            <div class="date-filter">
+                <label for="start">Earliest Date:</label>
+                <input type="date" id="start" name="trip-start"
+                        value="2018-07-22"
+                        min="2018-01-01" max="2018-12-31">
+            </div>
+            <div class="time-of-day-filter">
+                <div class="earliest-time">
+                    <label for="appt">Consider appointments as early as:</label>
+                    <input type="time" id="appt" name="appt" value="08:00">
+                </div>
+                <div class="latest-time">
+                        <label for="appt">Consider appointments as late as:</label>
+                        <input type="time" id="appt" name="appt" value="18:00">
+                    </div>
+            </div>
+        </div>
+        <!--Div to store the list of attendees-->
+        <div class="attendee-list">
+        </div>
+
+        <script src="javascripts/autocomplete.js"></script>
+        <script src="javascripts/append-input-field.js"></script>
+        <script src="javascripts/filters.js"></script>
+        <script>
+        // Load cached emails
+        var emails = ["some.email@hrsdc-rhdcc.gc.ca", "some.otheremail@canada.ca", "yet.anotheremail@hrsdc-rhdcc.gc.ca"];
+        // Call autocomplete on input field
+        autocomplete(document.getElementById("myInput"), emails);
+        // Register handler function to input submit button
+        appendToList(document.getElementById("add-item-to-list"));
+        // Register handler functions and setup defaults for filters
+        </script>
+    </body>
+</html>
+

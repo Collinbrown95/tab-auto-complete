@@ -3,8 +3,12 @@
     <head>
         <title>Tab Autocomplete</title>
         <link rel="stylesheet" type="text/css" href="css/autocomplete-layout.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     </head>
     <body>
+        <div class="title-information">
+            <h2 class="title">Application Title</h2>
+        </div>
         <div class="form-container">
             <!--Make sure the form has the autocomplete function switched off:-->
             <form autocomplete="off">
@@ -16,7 +20,7 @@
             </form>
         </div>
         <!--Div to store the filters-->
-        <div class="filters-container" style="visibility: hidden">
+        <div class="filters-container" style="display: none">
             <div class="buildings-filter">
                     <label>Buildings</label>
                     <ul>
@@ -25,19 +29,19 @@
             </div>
             <div class="floors-filter">
                 <label>Building Floors</label>
-                <ul>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 0</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 1</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 2</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 3</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 4</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 5</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 6</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 7</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 8</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 9</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 10</li>
-                    <li><input class="floor-checkbox" type="checkbox" checked>Floor 11</li>
+                <ul class="list-group">
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 0</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 1</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 2</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 3</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 4</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 5</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 6</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 7</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 8</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 9</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 10</li>
+                    <li><input class="list-group-item" type="checkbox" checked>Floor 11</li>
                 </ul>
             </div>
             <div class="equipment-filter">
@@ -81,6 +85,7 @@
         // Register handler function to input submit button
         appendToList(document.getElementById("add-item-to-list"));
         // Register handler functions and setup defaults for filters
+        setupFilters(document.getElementById("toggle-filters"));
         </script>
     </body>
 </html>

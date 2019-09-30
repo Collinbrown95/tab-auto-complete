@@ -2,6 +2,8 @@
 body {
   font: 16px Arial;
 }
+
+/*css for the auto-complete feature*/
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
@@ -48,7 +50,102 @@ input[type=submit] {
   color: #ffffff;
 }
 
+/*css for email form*/
+.form-container {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*css for title-information*/
+.title-information {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
 /*css for filters*/
 .filters-container {
-    display:"none";
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
+
+/*css for filters*/
+.buidings-filter {
+
+}
+/*css for filters*/
+.floors-filter {
+
+}
+
+/*css for filters*/
+.equipment-filter {
+
+}
+
+/*css for filters*/
+.date-filter {
+
+}
+
+/*css for filters*/
+.time-of-day-filter {
+
+}
+
+/*css for filters*/
+.latest-time {
+
+}
+
+/*css for attendee list*/
+.attendee-list {
+  width: 80%;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.attendee-email {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 5px;
+}
+
+.email-div {
+  padding: 3px;
+  margin: 3px;
+  background: #3cd462;
+  border: 0.25px solid #5b6362;
+  border-radius: 5px;
+}
+
+.email-text {
+  padding: 3px;
+  margin: 3px;
+}
+
+.delete-div {
+  padding: 2px;
+  margin: 2px;
+}
+
+.delete-button {
+  padding: 2px;
+  margin: 2px;
+  background: #db6262;
+  border: 0.25px solid #5b6362;
+  border-radius: 5px;
+}
+
+.delete-text {
+  padding: 3px;
+  margin: 3px;
+}
+
+/*css for delete button*/

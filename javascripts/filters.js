@@ -7,10 +7,10 @@ function setupFilters(inp) {
         filterDiv = document.getElementsByClassName("filters-container")[0];
         // either show or hide filterDiv depending on whether it is hidden or
         // showing
-        if (filterDiv.style.visibility == "hidden"){
-            filterDiv.style.visibility = "visible";
+        if (filterDiv.style.display == "none"){
+            filterDiv.style.display = "flex";
         } else {
-            filterDiv.style.visibility = "hidden";
+            filterDiv.style.display = "none";
         }
     });
 }

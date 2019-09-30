@@ -19,15 +19,38 @@ function appendToList(inp){
         document.getElementsByClassName("attendee-list")[0].appendChild(emailDiv);
 
     }
-    /*create div with email*/
+    /*create parent item div*/
     function createEmailDiv(email){
         var divContents = document.createElement("div");
         divContents.setAttribute("class", "attendee-email");
+        emailDiv = document.createElement("div");
+        emailDiv.setAttribute("class", "email-div");
+        // Create <p> tag to hold email text
         emailPTag = document.createElement("p");
-        emailPTag.setAttribute("class", "emailText");
+        emailPTag.setAttribute("class", "email-text");
         var emailText = document.createTextNode(email);
-        divContents.appendChild(emailPTag);
+        divContents.appendChild(emailDiv);
+        emailDiv.appendChild(emailPTag);
         emailPTag.appendChild(emailText);
+        // Add delete button in case user wishes to delete this item later.
+        deleteDiv = createDeleteDiv();
+        divContents.appendChild(deleteDiv);
         return divContents
+    }
+
+    /*create div for delete button*/
+    function createDeleteDiv(){
+        // Create parent div for delete button
+        deleteDiv = document.createElement("div");
+        deleteDiv.setAttribute("class", "delete-div");
+        // Add delete button in case user wishes to delete this item later.
+        deleteButton = document.createElement("div");
+        deleteButton.setAttribute("class", "delete-button");
+        deleteText = document.createElement("p");
+        deleteText.setAttribute("class", "delete-text");
+        deleteText.innerHTML = "Remove";
+        deleteButton.appendChild(deleteText);
+        deleteDiv.appendChild(deleteButton);
+        return deleteDiv
     }
 }
